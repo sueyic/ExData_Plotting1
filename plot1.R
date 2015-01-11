@@ -6,7 +6,12 @@ readAndTidyData <- function(filename) {
 
 df <- readAndTidyData("../exdata-data-household_power_consumption/household_power_consumption.txt")
 
+# Open png device.
 png(filename="plot1.png", width=480, height=480, units="px", pointsize="12", bg="transparent")
+
+# Plot.
 hist(df$Global_active_power, col="red", main="Global Active Power",
      xlab="Global Active Power (kilowatts)")
+
+# Close png device.
 dev.off()
